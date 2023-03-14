@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../public/styles.css">
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title> CollegeFinder </title>
+<link rel="shortcut icon" href="/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+</head>
+<body bgcolor="85BAFF">
+  <div class="container">
+    <!-- <login actions> -->
+        <form class="form" id="login">
+          <h1 class="form_titile">Login</h1>
+          <div class="form_message form_message--error"></div>
+          <div class="form_input-group">
+            <input type="text" class="form_input" id="logemail" autofocus placeholder="Email">
+            <div class="form_input-error-message"></div>
+          </div>
+          <div class="form_input-group">
+            <input type="password" class="form_input" id="logpassword" autofocus placeholder="Password">
+            <div class="form_input-error-message"></div>
+          </div>
+          <button class="form_button" type="submit" id="buttonLogin" onclick="loginEmailAndPassword(auth, logemail, logpassword)">Continue</button>
+          <p class="form_text">
+            <a class="form_link" src="src/main.js" href="src/main.css" id="linkforgotPass">Forgot your password</a>
+          <div class="form form--hidden">
+            <input type="text" class="form_input" placeholder="Enter Email">
+            <input type="text" class="form_input" placeholder="Enter Last Name">
+          </div>
+          </p>
+          <p class="form_text">
+            <a class="form_link" href="./" id="linkCreateAccount">Don't have an account? Create an account</a>
+          </p>
+        </form>
+  
+  
+    <!-- <forgot password actions> -->
+      <form class="form form--hidden" id="forgot">
+        <div class="form_input-group">
+          <h1 class="form_titile"> Forgot Password</h1>
+          <input type="text" class="form_input" id="email" placeholder="Enter email address">
+          <input type="text" class="form_input" id="fname" placeholder="Enter First Name">
+          <div class="form_input-error-message"></div>
+          <button class="form_button" type="submit" id="forgotButton" onclick="">Continue</button>
+          <p class="form_text">
+            <a class="form_link" href="./" id="linkCreateAccount">back</a>
+          </p>
+        </div>
+      </form>
+  
+  
+    <!---Create account actions-->
+      <form class="form form--hidden" id="creatAccount">
+        <h1 class="form_titile">Create Account</h1>
+        <div class="form_message form_message--error"></div>
+        <div class="form_input-group">
+          <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username">
+          <div class="form_input-error-message"></div>
+        </div>
+        <div class="form_input-group">
+          <input id="signemail" type="text" class="form_input" autofocus placeholder="Email Address">
+          <div class="form_input-error-message"></div>
+        </div>
+        <div class="form_input-group">
+          <div class="form_input-error-message"></div>
+        </div>
+        <div class="form_input-group">
+          <input id="signpassword" type="password" class="form_input" autofocus placeholder="Password">
+          <div class="form_input-error-message"></div>
+        </div>
+        <div class="form_input-group">
+          <input type="password" class="form_input" autofocus placeholder="Re-enter Password">
+          <div class="form_input-error-message"></div>
+        </div>
+        <button class="form_button" type="submit" id="createBut" onclick="signUpWithEmailAndPassword(signemail, signpassword)">Continue</button>
+        <p class="form_text">
+          <a class="form_link" href="./" id="linkLogin">Already have an account? Log in</a>
+      </form>
+    </div>
+    </p>
+   <script src="../public/src/loginScreen.js"></script>
+</body>
+</html>
